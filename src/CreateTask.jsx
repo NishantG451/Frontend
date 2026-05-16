@@ -8,7 +8,7 @@ export default function CreateTask({ token }) {
 
   const create = async () => {
 
-    const res = await fetch("http://127.0.0.1:8000/tasks", {
+    const res = await fetch("https://web-production-f3e93.up.railway.app/tasks", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

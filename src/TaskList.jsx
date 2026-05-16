@@ -6,7 +6,7 @@ export default function TaskList({ token }) {
 
   const loadTasks = async () => {
 
-    const res = await fetch("http://127.0.0.1:8000/tasks", {
+    const res = await fetch("https://web-production-f3e93.up.railway.app/tasks", {
       headers: {
         Authorization: "Bearer " + token
       }
@@ -19,7 +19,7 @@ export default function TaskList({ token }) {
 
   const deleteTask = async (id) => {
 
-    await fetch(`http://127.0.0.1:8000/tasks/${id}`, {
+    await fetch(`https://web-production-f3e93.up.railway.app/tasks/${id}`, {
       method: "DELETE",
       headers: {
         Authorization: "Bearer " + token

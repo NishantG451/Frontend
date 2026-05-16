@@ -29,7 +29,7 @@ export default function Dashboard() {
 
   const fetchTasks = async () => {
 
-    const res = await fetch("http://127.0.0.1:8000/tasks", {
+    const res = await fetch("https://web-production-f3e93.up.railway.app/tasks", {
       headers: {
         Authorization: `Bearer ${token}`
       }
@@ -43,7 +43,7 @@ export default function Dashboard() {
 
   const createTask = async () => {
 
-    await fetch("http://127.0.0.1:8000/tasks", {
+    await fetch("https://web-production-f3e93.up.railway.app/tasks", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -66,7 +66,7 @@ export default function Dashboard() {
 
   const markComplete = async (task) => {
 
-    await fetch(`http://127.0.0.1:8000/tasks/${task.id}`, {
+    await fetch(`https://web-production-f3e93.up.railway.app/tasks/${task.id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -85,7 +85,7 @@ export default function Dashboard() {
 
   const deleteTask = async (id) => {
 
-    await fetch(`http://127.0.0.1:8000/tasks/${id}`, {
+    await fetch(`https://web-production-f3e93.up.railway.app/tasks/${id}`, {
       method: "DELETE",
       headers: {
         Authorization: `Bearer ${token}`
